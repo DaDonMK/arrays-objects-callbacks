@@ -17,8 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
-
+function first(arr){
+  return arr[0]
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -31,9 +32,10 @@ var arr = [40,50,60];
   Create a function named 'last' that is given 'arr' as an argument. 
   Return the last item in the given array.
 */
-
+function last(arr){
+  return arr.pop()
+}
 //Code Here
-
 
 
 ////////// PROBLEM 3 //////////
@@ -47,10 +49,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
-
-
-
+function looper(family){
+  for(var i = 0; i < family.length; i++){
+     window.alert(family[i])
+  }
+}
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -62,8 +65,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
 
-//Code Here
-
+function reversedLooper(letters){
+  for(var i = letters.length - 1; i >= 0; i--){
+    window.alert(letters[i])
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -76,13 +82,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Write a function named evenFinder that is given nums as it's only argument.
   Return an array that contains the even numbers from the nums array.
 */
-
-//Code Here
-
-
-
-
-
+function evenFinder(nums){
+  var arr = []
+  for(var i = 0; i < nums.length; i++){
+    if(nums[i] % 2 === 0){
+      arr.push(nums[i])
+    }
+  }
+    return arr
+}
 
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
@@ -106,15 +114,29 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray){
+  var even_arr = []
+  var odd_arr = []
+  var full_arr = []
+  for(var i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      even_arr.push(numbersArray[i])
+  }else{
+      odd_arr.push(numbersArray[i])
+  }
+}
+  full_arr.push(even_arr)
+  full_arr.push(odd_arr)
+  return full_arr
+}
 
-
-
+  
 ////////// PROBLEM 7 //////////
 
 // Do not edit the code below.
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * 30);
+  
 };
 // Do not edit the code above.
 
@@ -127,10 +149,26 @@ var getRandomArbitrary = function() {
   Loop through the array to see if randomNumber is in the array. 
   If it is, return true, if it's not, return false
 */
+var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-//Code Here
+function finder(array, getRandomArbitrary){
+  
+  let randomNumber = getRandomArbitrary
+  console.log(randomNumber)
+
+  for(var i = 0; i <= array.length; i++){
+    if(typeof(randomNumber) == 'undefined'){
+      return false
+    }
+    if(randomNumber === array[i]){
+      return true 
+    }
+  }
+  return false
+}
 
 
+console.log(finder(numbers, getRandomArbitrary()))
 
 ////////// PROBLEM 8 //////////
 
