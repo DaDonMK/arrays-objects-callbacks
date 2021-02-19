@@ -77,7 +77,6 @@ Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console.
 */
 
-console.log(backPack)
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -97,7 +96,10 @@ var user2 = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user2.name = 'Bryan G. Smith'
+user2.email = 'bryan.smith@devmounta.in'
+
+
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -108,20 +110,26 @@ var user2 = {
   Create an empty object called methodCollection.
 */
 
-//Code Here
-
+let methodCollection = {}
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-//Code Here
+methodCollection.alertHello = function(){
+  window.alert('hello')
+}
 
-/*
-  Now call your alertHello and logHello methods.
+methodCollection.logHello = function(){
+  console.log('hello')
+}
+
+/*  Now call your alertHello and logHello methods.
 */
 
-//Code Here
+methodCollection.logHello()
+methodCollection.alertHello()
+
 
 ////////// PROBLEM 6 //////////
 
@@ -130,7 +138,14 @@ var user2 = {
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(fullname, bday, socialsecurity){
+  let obj = {
+    name: fullname,
+    birthday: bday,
+    ssn: socialsecurity
+  }
+  return obj
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -139,4 +154,11 @@ var user2 = {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNum, expDate, securityC){
+  let CreditCard={
+    CardNumber: cardNum,
+    ExpirationDate: expDate,
+    SecurityCode: securityC
+  }
+  return CreditCard
+}

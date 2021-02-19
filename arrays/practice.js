@@ -195,8 +195,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
 
+function removeItem(myGroceryList, item){
+  var x = []
+  if (myGroceryList.length == 1){
+  
+  for(i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === item){
+      myGroceryList.splice(i, 1)
+    }
+  }
+  return myGroceryList
+}else{
+  return x
+}
+}
+
+function addItem(myGroceryList, item){
+  // if (myGroceryList == 0){
+  //   return []
+  // }
+  myGroceryList.push(item)
+  return myGroceryList
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -205,8 +226,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
-
+function maker(){
+  var arr = []
+  var inc  = 1
+  for(i = 0; i < 215; i++){
+    arr.push(inc)
+    inc++
+  }
+  return arr
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -220,10 +248,19 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
-  
-//Code Here
 
+function addTen(numbers){
+  let arr = []
 
+  for(i=0;i<numbers.length;i++){
+    if(typeof(numbers[i]) === String){
+      arr.push((+numbers[i]) + 10)
+    }else{
+    arr.push(numbers[i]+10)}
+  }
+  return arr
+
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -299,8 +336,12 @@ var colt = {
   After that, console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+function addinto(array){
+  array.push(joe, cahlan, ryan, colt)
+  return array
+}
 
+console.log(addinto(devMountainEmployees))
 
 
 /*
@@ -308,7 +349,12 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for(i=0;i<devMountainEmployees.length;i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1)
+  }
+}
+console.log(devMountainEmployees)
 
 
 
@@ -320,8 +366,15 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = []
 
+users = [
+
+{name: 'mustafa', email: "m"},
+{},
+{}
+
+]
 
 
 /*
